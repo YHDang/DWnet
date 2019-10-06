@@ -1,0 +1,104 @@
+2019-05-25 01:15:26,197:WARNING: Setting up a new session...
+2019-05-25 01:15:26,201:INFO: Socket refused connection, running socketless
+2019-05-25 01:15:26,201:ERROR: [Errno 111] Connection refused
+2019-05-25 01:15:26,301:WARNING: Setting up a new session...
+2019-05-25 01:15:26,305:INFO: Socket refused connection, running socketless
+2019-05-25 01:15:26,305:ERROR: [Errno 111] Connection refused
+2019-05-25 01:15:26,405:WARNING: Setting up a new session...
+2019-05-25 01:15:26,409:INFO: Socket refused connection, running socketless
+2019-05-25 01:15:26,410:ERROR: [Errno 111] Connection refused
+2019-05-25 01:15:26,509:WARNING: Setting up a new session...
+2019-05-25 01:15:26,514:INFO: Socket refused connection, running socketless
+2019-05-25 01:15:26,514:ERROR: [Errno 111] Connection refused
+2019-05-25 01:15:26,614:WARNING: Setting up a new session...
+2019-05-25 01:15:26,620:INFO: Socket refused connection, running socketless
+2019-05-25 01:15:26,620:ERROR: [Errno 111] Connection refused
+2019-05-25 01:15:26,720:INFO: dataset_dir: /home/dyh/Source/dataset/RGB/data0/
+2019-05-25 01:15:26,720:INFO: dataset_name: NTU-RGB-D-CV
+2019-05-25 01:15:26,720:INFO: model_dir: ./
+2019-05-25 01:15:26,720:INFO: model_name: HCN
+2019-05-25 01:15:26,720:INFO: load_model: experiments/NTU-RGB-D-CV/HCN02/params.json
+2019-05-25 01:15:26,721:INFO: load: True
+2019-05-25 01:15:26,721:INFO: mode: test
+2019-05-25 01:15:26,721:INFO: num: 02
+2019-05-25 01:15:26,721:INFO: model_version: HCN
+2019-05-25 01:15:26,721:INFO: experiment_path: ./experiments/NTU-RGB-D-CV/HCN02
+2019-05-25 01:15:26,721:INFO: restore_file: experiments/NTU-RGB-D-CV/HCN02/params.json
+2019-05-25 01:15:26,721:INFO: gpu_id: 0
+2019-05-25 01:15:26,722:INFO: cuda: True
+2019-05-25 01:15:26,722:INFO: data_parallel: False
+2019-05-25 01:15:26,722:INFO: seed: 0
+2019-05-25 01:15:26,722:INFO: lr: 0.001
+2019-05-25 01:15:26,722:INFO: lr_decay_type: exp
+2019-05-25 01:15:26,722:INFO: lr_step: [100, 160, 200]
+2019-05-25 01:15:26,722:INFO: scheduler_gamma: 0.1
+2019-05-25 01:15:26,723:INFO: scheduler_gamma2: 0.99
+2019-05-25 01:15:26,723:INFO: scheduler_gamma3: 0.5
+2019-05-25 01:15:26,723:INFO: patience: 20
+2019-05-25 01:15:26,723:INFO: batch_size: 64
+2019-05-25 01:15:26,723:INFO: num_epochs: 400
+2019-05-25 01:15:26,723:INFO: start_epoch: 0
+2019-05-25 01:15:26,723:INFO: save_best_ever_n_epoch: 50
+2019-05-25 01:15:26,723:INFO: save_summary_steps: 1
+2019-05-25 01:15:26,724:INFO: num_workers: 4
+2019-05-25 01:15:26,724:INFO: optimizer: Adam
+2019-05-25 01:15:26,724:INFO: weight_decay: 0.0001
+2019-05-25 01:15:26,724:INFO: clip: 0.5
+2019-05-25 01:15:26,724:INFO: train_feeder_args: {'data_path': None, 'label_path': None, 'random_valid_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 64, 'normalization': False, 'debug': False, 'origin_transfer': 0, 'crop_resize': True, 'p_interval': [0.5, 1]}
+2019-05-25 01:15:26,724:INFO: test_feeder_args: {'data_path': None, 'label_path': None, 'random_valid_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 64, 'normalization': False, 'debug': False, 'origin_transfer': 0, 'crop_resize': True, 'p_interval': [0.95]}
+2019-05-25 01:15:26,724:INFO: model_args: {'in_channel': 3, 'out_channel': 64, 'window_size': 64, 'num_joint': 25, 'num_person': 2, 'num_class': 60}
+2019-05-25 01:15:26,725:INFO: loss_args: {'type': 'CE'}
+2019-05-25 01:15:26,725:INFO: dataset_dir: /home/dyh/Source/dataset/RGB/data0/
+2019-05-25 01:15:26,725:INFO: dataset_name: NTU-RGB-D-CV
+2019-05-25 01:15:26,725:INFO: mode: test
+2019-05-25 01:15:28,599:INFO: HCN(
+  (conv1): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): ReLU()
+  )
+  (conv2): Conv2d(64, 64, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+  (conv3): Sequential(
+    (0): Conv2d(25, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv4): Sequential(
+    (0): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): Dropout2d(p=0.5)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv1m): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): ReLU()
+  )
+  (conv2m): Conv2d(64, 64, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+  (conv3m): Sequential(
+    (0): Conv2d(25, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv4m): Sequential(
+    (0): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): Dropout2d(p=0.5)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv5): Sequential(
+    (0): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+    (2): Dropout2d(p=0.5)
+    (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv6): Sequential(
+    (0): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+    (2): Dropout2d(p=0.5)
+    (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (fc7): Sequential(
+    (0): Linear(in_features=4096, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout2d(p=0.5)
+  )
+  (fc8): Linear(in_features=512, out_features=60, bias=True)
+)
+2019-05-25 01:15:28,599:INFO: Loading the datasets...
+2019-05-25 01:15:36,248:INFO: - done.
+2019-05-25 01:15:36,248:INFO: Restoring parameters from experiments/NTU-RGB-D-CV/HCN02/params.json

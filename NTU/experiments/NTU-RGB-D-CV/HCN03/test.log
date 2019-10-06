@@ -1,0 +1,107 @@
+2019-05-29 17:03:21,556:WARNING: Setting up a new session...
+2019-05-29 17:03:21,564:INFO: Visdom successfully connected to server
+2019-05-29 17:03:21,662:WARNING: Setting up a new session...
+2019-05-29 17:03:21,669:INFO: Visdom successfully connected to server
+2019-05-29 17:03:21,767:WARNING: Setting up a new session...
+2019-05-29 17:03:21,775:INFO: Visdom successfully connected to server
+2019-05-29 17:03:21,873:WARNING: Setting up a new session...
+2019-05-29 17:03:21,882:INFO: Visdom successfully connected to server
+2019-05-29 17:03:21,979:WARNING: Setting up a new session...
+2019-05-29 17:03:21,989:INFO: Visdom successfully connected to server
+2019-05-29 17:03:22,086:INFO: dataset_dir: data0/
+2019-05-29 17:03:22,086:INFO: dataset_name: NTU-RGB-D-CV
+2019-05-29 17:03:22,086:INFO: model_dir: ./
+2019-05-29 17:03:22,087:INFO: model_name: HCN
+2019-05-29 17:03:22,087:INFO: load_model: None
+2019-05-29 17:03:22,087:INFO: load: True
+2019-05-29 17:03:22,087:INFO: mode: test
+2019-05-29 17:03:22,087:INFO: num: 03
+2019-05-29 17:03:22,087:INFO: model_version: HCN
+2019-05-29 17:03:22,087:INFO: experiment_path: ./experiments/NTU-RGB-D-CV/HCN03
+2019-05-29 17:03:22,087:INFO: restore_file: ./experiments/NTU-RGB-D-CV/HCN03/checkpoint/best.pth.tar
+2019-05-29 17:03:22,087:INFO: gpu_id: -1
+2019-05-29 17:03:22,088:INFO: cuda: True
+2019-05-29 17:03:22,088:INFO: data_parallel: False
+2019-05-29 17:03:22,088:INFO: seed: 0
+2019-05-29 17:03:22,088:INFO: lr: 0.001
+2019-05-29 17:03:22,088:INFO: lr_decay_type: exp
+2019-05-29 17:03:22,088:INFO: lr_step: [100, 160, 200]
+2019-05-29 17:03:22,088:INFO: scheduler_gamma: 0.1
+2019-05-29 17:03:22,088:INFO: scheduler_gamma2: 0.99
+2019-05-29 17:03:22,089:INFO: scheduler_gamma3: 0.5
+2019-05-29 17:03:22,089:INFO: patience: 20
+2019-05-29 17:03:22,089:INFO: batch_size: 64
+2019-05-29 17:03:22,089:INFO: num_epochs: 400
+2019-05-29 17:03:22,089:INFO: start_epoch: 0
+2019-05-29 17:03:22,089:INFO: save_best_ever_n_epoch: 50
+2019-05-29 17:03:22,089:INFO: save_summary_steps: 1
+2019-05-29 17:03:22,089:INFO: num_workers: 4
+2019-05-29 17:03:22,089:INFO: optimizer: Adam
+2019-05-29 17:03:22,090:INFO: weight_decay: 0.0001
+2019-05-29 17:03:22,090:INFO: clip: 0.5
+2019-05-29 17:03:22,090:INFO: train_feeder_args: {'data_path': None, 'label_path': None, 'random_valid_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 32, 'normalization': False, 'debug': False, 'origin_transfer': 0, 'crop_resize': True, 'p_interval': [0.5, 1]}
+2019-05-29 17:03:22,090:INFO: test_feeder_args: {'data_path': None, 'label_path': None, 'random_valid_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 32, 'normalization': False, 'debug': False, 'origin_transfer': 0, 'crop_resize': True, 'p_interval': [0.95]}
+2019-05-29 17:03:22,090:INFO: model_args: {'in_channel': 3, 'out_channel': 64, 'window_size': 32, 'num_joint': 25, 'num_person': 2, 'num_class': 60}
+2019-05-29 17:03:22,090:INFO: loss_args: {'type': 'CE'}
+2019-05-29 17:03:22,090:INFO: dataset_dir: data0/
+2019-05-29 17:03:22,090:INFO: dataset_name: NTU-RGB-D-CV
+2019-05-29 17:03:22,091:INFO: mode: test
+2019-05-29 17:03:22,117:INFO: HCN(
+  (conv1): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): ReLU()
+  )
+  (conv2): Conv2d(64, 32, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+  (conv3): Sequential(
+    (0): Conv2d(25, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv4): Sequential(
+    (0): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): Dropout2d(p=0.5)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv1m): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): ReLU()
+  )
+  (conv2m): Conv2d(64, 32, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+  (conv3m): Sequential(
+    (0): Conv2d(25, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv4m): Sequential(
+    (0): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): Dropout2d(p=0.5)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv5): Sequential(
+    (0): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+    (2): Dropout2d(p=0.5)
+    (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv6): Sequential(
+    (0): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+    (2): Dropout2d(p=0.5)
+    (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (fc7): Sequential(
+    (0): Linear(in_features=1024, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout2d(p=0.5)
+  )
+  (fc8): Linear(in_features=512, out_features=60, bias=True)
+)
+2019-05-29 17:03:22,117:INFO: Loading the datasets...
+2019-05-29 17:03:32,398:INFO: - done.
+2019-05-29 17:03:32,398:INFO: Restoring parameters from ./experiments/NTU-RGB-D-CV/HCN03/checkpoint/best.pth.tar
+2019-05-29 17:03:34,379:WARNING: Setting up a new session...
+2019-05-29 17:03:34,401:INFO: Visdom successfully connected to server
+2019-05-29 17:03:34,483:WARNING: Setting up a new session...
+2019-05-29 17:03:34,490:INFO: Visdom successfully connected to server
+2019-05-29 17:03:34,587:WARNING: Setting up a new session...
+2019-05-29 17:03:34,596:INFO: Visdom successfully connected to server
+2019-05-29 17:07:52,404:INFO: - Eval metrics : accuracytop1: 0.944 ; accuracytop5: 0.996 ; loss: 0.180 ; ls_all: 0.180 ; ls_CE: 0.180
+2019-05-29 17:10:02,989:INFO: - Eval metrics : accuracytop1: 0.899 ; accuracytop5: 0.987 ; loss: 0.319 ; ls_all: 0.319 ; ls_CE: 0.319
